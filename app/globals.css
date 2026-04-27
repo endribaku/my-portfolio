@@ -1,0 +1,18 @@
+@import "tailwindcss";
+
+@theme {
+  --color-bg: #f7f5f4;
+  --color-fg: #ede8e6;
+  --color-text: #32312b;
+  --color-muted: #9a968f;
+  --color-link: #6a6960;
+  --font-sans: var(--font-geist), ui-sans-serif, system-ui, sans-serif;
+}
+
+html {
+  font-family: var(--font-sans);
+  font-size: 18px;
+  line-height: 1.75;
+  color: var(--color-text);
+  background: var(--color-bg);
+}
