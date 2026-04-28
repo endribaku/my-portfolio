@@ -19,6 +19,13 @@ export const project = defineType({
       validation: (rule) => rule.required(),
     }),
     defineField({
+      name: "order",
+      title: "Order",
+      type: "number",
+      description: "Position on the home page (lower numbers appear first).",
+      validation: (rule) => rule.integer().min(0),
+    }),
+    defineField({
       name: "description",
       title: "Description",
       type: "text",

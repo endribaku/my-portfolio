@@ -1,6 +1,6 @@
 import { groq } from "next-sanity";
 
-export const allProjectsQuery = groq`*[_type == "project" && defined(slug.current)] | order(_createdAt desc){
+export const allProjectsQuery = groq`*[_type == "project" && defined(slug.current)] | order(coalesce(order, 9999) asc, _createdAt desc){
   _id,
   title,
   "slug": slug.current,
